@@ -13,12 +13,12 @@ export default function Result() {
     return (
         <Modal visible={result.finished}>
             {result.tied ? (
-                <span className="uppercase font-bold text-light-500 text-5xl mb-5">
+                <span className="uppercase font-bold text-light-500 text-xl mb-1 md:text-5xl md:mb-5">
                     Terminou empatado
                 </span>
             ) : (
                 <>
-                    <span className="uppercase font-bold text-light-500 text-xl">
+                    <span className="uppercase font-bold text-light-500 md:text-xl pb-4">
                         Jogador {result.xWins ? PlayerType.X : PlayerType.O} ganhou!
                     </span>
 
@@ -28,21 +28,23 @@ export default function Result() {
                         }`}
                     >
                         {result.xWins ? (
-                            <IconX size={80} stroke={6} />
+                            <IconX size={65} stroke={6} />
                         ) : (
-                            <IconCircle size={70} stroke={6} />
+                            <IconCircle size={65} stroke={6} />
                         )}
-                        <span className="uppercase text-6xl font-bold">ganhou a rodada</span>
+                        
+                        <span className="uppercase text-xl md:text-6xl font-bold">ganhou a rodada</span>
                     </div>
                 </>
             )}
-            <div className="flex gap-5">
+            
+            <div className="flex gap-5 pt-3">
                 <Button onClick={clear}>
-                    <div className="font-bold uppercase text-dark-400 text-xl px-4 py-2">Zerar</div>
+                    <div className="font-bold uppercase text-dark-400 md:text-xl px-1 md:px-4 md:py-2">Zerar</div>
                 </Button>
 
                 <Button color="secondary" onClick={restart}>
-                    <div className="font-bold uppercase text-dark-400 text-xl px-4 py-2">
+                    <div className="font-bold uppercase text-dark-400 md:text-xl md:px-4 md:py-2">
                         Próxima Rodada
                     </div>
                 </Button>

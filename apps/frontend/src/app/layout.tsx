@@ -17,12 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
-        <div className='flex justify-center items-center h-screen'>
-          <GameProvider>
-            {children}
-          </GameProvider>
-        </div>
+      <body className={`
+          ${outfit.className}
+          overflow-hidden
+      `}>
+        <GameProvider>
+          {children}
+        </GameProvider>
       </body>
     </html>
   )

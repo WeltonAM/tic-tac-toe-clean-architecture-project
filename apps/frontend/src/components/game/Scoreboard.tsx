@@ -9,10 +9,10 @@ export default function Scoreboard() {
     function renderItem(label: string, value: number, color: string) {
         return (
             <Card color={color as any} noBorder>
-                <div className="flex justify-center items-center text-dark-500 w-32 h-18">
-                    <div className="flex flex-col justify-center items-center">
+                <div className="flex justify-center items-center text-dark-500 px-2 md:px-4">
+                    <div className="flex flex-col justify-center items-center ">
                         <span className="uppercase">{label}</span>
-                        <span className="text-3xl font-black">{value}</span>
+                        <span className="text-2xl md:text-3xl font-black">{value}</span>
                     </div>
                 </div>
             </Card>
@@ -20,7 +20,7 @@ export default function Scoreboard() {
     }
 
     return (
-        <div className="flex gap-7">
+        <div className="flex gap-5">
             {renderItem(`${player1.type} (${player1.name})`, player1.score, 'primary')}
             {renderItem('Empates', ties, 'light')}
             {renderItem(`${player2.type} (${player2.name})`, player2.score, 'secondary')}
