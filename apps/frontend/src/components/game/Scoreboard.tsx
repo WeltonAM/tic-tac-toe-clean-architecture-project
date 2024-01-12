@@ -10,7 +10,7 @@ export default function Scoreboard() {
         return (
             <Card color={color as any} noBorder>
                 <div className="flex justify-center items-center text-dark-500 px-2 md:px-4">
-                    <div className="flex flex-col justify-center items-center ">
+                    <div className="flex flex-col justify-center items-center">
                         <span className="uppercase">{label}</span>
                         <span className="text-2xl md:text-3xl font-black">{value}</span>
                     </div>

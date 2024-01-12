@@ -6,7 +6,7 @@ import Result from "@/components/result"
 export default function Home() {
   
   return (
-    <div className="flex flex-col gap-7 min-h-screen justify-center items-center">
+    <div className="flex flex-col gap-7 justify-center items-center min-h-screen">
       <Result />
       <Menu />
       <BoardArea />

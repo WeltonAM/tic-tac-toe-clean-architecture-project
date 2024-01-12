@@ -11,7 +11,7 @@ export default function Menu() {
     const { currentPlayer, restart } = useContext(GameContext)
 
     return (
-        <div className="flex justify-around items-center w-2/3 gap-8 md:gap-1 p-auto h-9">
+        <div className="flex justify-around items-center w-2/3 gap-8 md:gap-1">
             <div className="flex items-center gap-2">
                 <IconX size={40} stroke={6} className="text-primary-500" />
                 <IconCircle size={35} stroke={6} className="text-secondary-500" />
