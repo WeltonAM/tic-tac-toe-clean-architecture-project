@@ -12,7 +12,7 @@ export default function CellArea(props: CellAreaProps) {
         <Card
             color={!props.selected ? 'dark' : props.type === PlayerType.X ? 'primary' : 'secondary'}
         >
-            <div className={`flex justify-center items-center w-20 md:w-32 h-20 md:h-32`}>
+            <div className={`flex justify-center items-center w-20 md:w-28 h-20 md:h-28`}>
                 {props.type === PlayerType.X && (
                     <IconX
                         size={70}
@@ -20,7 +20,7 @@ export default function CellArea(props: CellAreaProps) {
                         className={props.selected ? 'text-dark-500' : 'text-primary-500'}
                     />
                 )}
-                    
+
                 {props.type === PlayerType.O && (
                     <IconCircle
                         size={70}
